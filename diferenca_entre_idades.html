@@ -1,0 +1,24 @@
+<meta charset="UTF-8" />
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function calculaIdade(primeiraIdade, segundaIdade) {
+        var diferencaIdade = primeiraIdade > segundaIdade ? primeiraIdade - segundaIdade : segundaIdade - primeiraIdade;
+        if (diferencaIdade == 1) {
+            return diferencaIdade + " ano."
+        } else {
+            return diferencaIdade + " anos."
+        }
+    }
+
+    function exibaNaTela(primeiraIdade, segundaIdade) {
+        pulaLinha();
+        document.write("A diferença entre Idades é : " + calculaIdade(primeiraIdade, segundaIdade));
+    }
+
+    exibaNaTela(20, 19);
+
+</script>

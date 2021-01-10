@@ -1,0 +1,29 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function entradaDados() {
+
+        return prompt("Digite seu Nome: ");
+    }
+
+    function validaCampos(nome) {
+        if (nome === "") {
+            validaCampos(entradaDados());
+        } else {
+            mostra("Olá " + nome)
+        }
+    }
+
+    validaCampos(entradaDados());
+
+</script>

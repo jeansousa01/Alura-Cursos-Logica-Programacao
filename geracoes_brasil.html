@@ -1,0 +1,21 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function calculaGeracoes() {
+        var anoBrasilColonizado = 1500;
+        var anoAtual = 2021;
+        var mediaGeracoes = Math.round((anoAtual - anoBrasilColonizado) / 28);
+        return mediaGeracoes;
+    }
+
+    function mostra() {
+        document.write("Se Passaram " +calculaGeracoes() +" Gerações." );
+    }
+
+    mostra();
+</script>
