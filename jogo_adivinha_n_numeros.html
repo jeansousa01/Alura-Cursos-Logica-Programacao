@@ -1,0 +1,36 @@
+<meta charset="UTF-8" />
+
+<script>
+    function pulaLinha() {
+        document.write("<br>")
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteaNumeros(qtdeNumeros) {
+        return Math.round(Math.random() * qtdeNumeros);
+    }
+
+    function verificaNumeroSorteado(palpite, qtdeNumeros) {
+        var numeroSorteado = sorteaNumeros(qtdeNumeros);
+        console.log(numeroSorteado);
+        if (numeroSorteado == palpite) {
+            mostra("Parabéns, você acertou o Número Sorteado");
+        } else if (palpite > numeroSorteado) {
+            mostra("Você não acertou, seu Palpite foi maior que o número sorteado\nPalpite: " + palpite);
+
+        } else {
+            mostra("Você não acertou, seu Palpite foi menor que o número sorteado\nPalpite:  " + palpite);
+
+        }
+    }
+
+    var qtdeNumeros = parseInt(prompt("Digite Quantidade de números para Sorteio"));
+
+    var palpite = parseInt(prompt("Digite um número:"));
+    verificaNumeroSorteado(palpite, qtdeNumeros);
+
+</script>
