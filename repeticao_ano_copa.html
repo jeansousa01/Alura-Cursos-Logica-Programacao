@@ -1,0 +1,30 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function anosDeCopas() {
+
+        while (anoCopa <= anoAtual) {
+            mostra("Copa em...." + anoCopa);
+            anoCopa += 4;
+        }
+    }
+
+    var anoCopa = 1930;
+    var anoAtual = 2021;
+    anosDeCopas();
+
+
+
+  
+
+</script>
