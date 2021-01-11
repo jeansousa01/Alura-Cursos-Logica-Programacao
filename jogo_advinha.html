@@ -1,0 +1,30 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>")
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+    function advinhaNumeroPensado(palpite) {
+        if (numeroPensado == palpite) {
+            return "Parabéns Acertou número pensado: " + palpite;
+        }
+
+        if (palpite != numeroPensado) {
+            return "Continue Tentado " + numeroPensado;
+        }
+    }
+
+    var numeroPensado = Math.round(Math.random() * 1);
+    var nome = prompt("Digite seu Nome.: ");
+    var palpite = parseInt(prompt(nome + ", Digite um Número: "));
+
+    mostra(advinhaNumeroPensado(palpite))
+</script>
