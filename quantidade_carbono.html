@@ -1,0 +1,28 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function comparaCarbono(qtdeCarbono1, qtdeCarbono2) {
+        if (qtdeCarbono1 == qtdeCarbono2) {
+            return "São Carbonos Idênticos.";
+        } else {
+            return "São Carbonos Diferentes. ";
+        }
+    }
+
+
+    var qtdeCarbono1 = parseInt(prompt("Digite a Quantidade de Carbono 1."));
+    var qtdeCarbono2 = parseInt(prompt("Digite a Quantidade de Carbono 2.")) + 2
+    console.log(qtdeCarbono2)
+    mostra(comparaCarbono(qtdeCarbono1, qtdeCarbono2))
+
+</script>
