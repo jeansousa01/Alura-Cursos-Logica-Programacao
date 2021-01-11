@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function numerosPares() {
+        var contador = 1;
+
+   mostra("Números Pares: ")
+        while (contador <= 100) {
+            if (contador % 2 == 0) {
+                mostra("O Número... " + contador)
+            }
+            contador += 1;
+        }
+    }
+
+numerosPares();
+</script>
