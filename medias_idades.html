@@ -1,0 +1,34 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaMediaDasIdades(quantidadePessoas) {
+
+        var contador = 0;
+        var totalIdades = 0;
+
+        while (contador < quantidadePessoas) {
+
+            var idade = parseInt(prompt("Digite a " + (contador + 1) + "ª Idade...."));
+            totalIdades = totalIdades + idade;
+            contador++;
+        }
+
+        mostra("A Media das Idades: " + (totalIdades / quantidadePessoas));
+    }
+
+    function recebeIdades() {
+        var quantidadeDePessoas = parseInt(prompt("Digite a quantidade de Pessoas..."));
+        return quantidadeDePessoas;
+    }
+    calculaMediaDasIdades(recebeIdades());
+</script>
