@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function validaIdade() {
+        var idade = parseInt(prompt("Digite sua Idade: "));
+        
+        while(isNaN(idade)){
+        var idade = parseInt(prompt("Digite sua Idade: "));
+
+        }
+
+        mostra(idade)
+    }
+
+    validaIdade();
+</script>
