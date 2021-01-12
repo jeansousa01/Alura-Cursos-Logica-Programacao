@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function criaTabuada(fator) {
+
+        mostra("Tabuada do " + fator)
+        for (var multiplicador = 1; multiplicador <= 10; multiplicador += 1) {
+            mostra(`${fator} x ${multiplicador} = ${fator * multiplicador}`);
+        }
+
+    }
+
+    var fator = parseInt(prompt("Qual o Fator para Multiplicação? "));
+
+    criaTabuada(fator)
+
+</script>
