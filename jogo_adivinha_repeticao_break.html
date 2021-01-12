@@ -1,0 +1,40 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function numerosSorteados() {
+        return Math.round(Math.random() * 10);
+    }
+
+    function criaJogo() {
+
+        var totalTentativas = 3;
+        var sorteandoNumeros = numerosSorteados();
+        var contador = 0;
+   
+        console.log(sorteandoNumeros);
+        while (contador < totalTentativas) {            
+            var palpite = parseInt(prompt("Digite um número: "));
+            if (palpite == sorteandoNumeros) {
+                mostra("Parabéns, você Acertou o número Sorteado, na " +
+                    (contador + 1) + "º, tentativa.");
+                break;
+            } else {
+                mostra("Você Errou, continue tentando....");
+            }
+            contador++;
+
+        }
+    }
+
+    criaJogo();
+</script>
