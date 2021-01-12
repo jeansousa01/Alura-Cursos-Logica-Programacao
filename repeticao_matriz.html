@@ -1,0 +1,36 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function numerosSorteados() {
+        return Math.round(Math.random() * 10);
+    }
+
+    function perguntaQuantidadeDeLinhas() {
+        return parseInt(prompt("Digite a Quantidade de Linhas"));
+    }
+
+    function criaMatrizDeLinhas() {
+
+        var quantidadeDeLinhas = perguntaQuantidadeDeLinhas();
+        var quantidadeDeEstrelas = 100;
+        for (var linha = 0; linha < quantidadeDeLinhas; linha++) {
+            var mensagem = "";
+            for (var coluna = 0; coluna < quantidadeDeEstrelas; coluna += 1) {
+                mensagem += "*";
+            }
+            mostra(mensagem);
+        }
+    }
+    
+    criaMatrizDeLinhas();
+</script>
