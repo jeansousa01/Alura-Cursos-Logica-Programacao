@@ -1,0 +1,36 @@
+<meta charset="UTF-8" />
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaMediaEventos() {
+        quantidadeEventos = entradaDeDados();
+
+        var contador = 0;
+        var somaGastos = 0;
+        while (contador < quantidadeEventos) {
+            var gastoPorEvento = parseFloat(prompt("Digite o " + (contador + 1) + "º Gasto."));
+            somaGastos += gastoPorEvento;
+            contador++;
+        }
+
+        mostra("A Media dos gastos são: " + (somaGastos / quantidadeEventos))
+    }
+
+    function entradaDeDados() {
+        var quantidadeEventos = parseInt(prompt("Digite a Quantidade de Eventos"));
+        return quantidadeEventos;
+    }
+
+    calculaMediaEventos();
+
+</script>
